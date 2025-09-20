@@ -53,7 +53,6 @@ export default function CategorySection({ title, categories, isProducts = false 
   };
 
   const handleQuantityChange = (productId: string, quantity: number) => {
-    // Handle quantity changes if needed
     console.log(`Quantity changed for ${productId}: ${quantity}`);
   };
 
@@ -66,7 +65,6 @@ export default function CategorySection({ title, categories, isProducts = false 
         <ShopAllButton />
       </div>
 
-      {/* Mobile: 2 columns, Tablet: 3 columns, Desktop: 6 columns */}
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6 w-full" data-name="Categories Grid">
         {categories.map((ele, index) => (
           isProducts ?

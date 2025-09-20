@@ -64,14 +64,13 @@ export default function FeaturedCategories() {
   const { addToCart } = useCart();
 
   const getVisibleProducts = () => {
-    if (window.innerWidth < 768) return 2; // mobile: 2 products
-    if (window.innerWidth < 1024) return 3; // tablet: 3 products
-    return 6; // desktop: 6 products
+    if (window.innerWidth < 768) return 2; 
+    if (window.innerWidth < 1024) return 3; 
+    return 6; 
   };
 
   const [visibleProducts, setVisibleProducts] = useState(getVisibleProducts());
 
-  // Update visible products on window resize
   useState(() => {
     const handleResize = () => setVisibleProducts(getVisibleProducts());
     if (typeof window !== 'undefined') {

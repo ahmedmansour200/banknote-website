@@ -172,7 +172,6 @@ export default function ProductsWithDiscounts() {
 
 
     if (product) {
-      // Add the product to cart using the cart context
       addToCart({
         id: product.id,
         name: product.name,
@@ -181,7 +180,6 @@ export default function ProductsWithDiscounts() {
         rating: product.rating
       });
 
-      // Reset the quantity counter after adding to cart
       setQuantities(prev => ({
         ...prev,
         [productId]: 0
@@ -202,7 +200,6 @@ export default function ProductsWithDiscounts() {
 
                 <div className="w-full">
                   <div className="content-start flex flex-col gap-[20px] items-start justify-start relative shrink-0 w-full">
-                    {/* Row 1 */}
                     <div className="content-stretch flex gap-[16px] items-center justify-start relative shrink-0 w-full overflow-x-auto">
                       <img src='images/prodectdisc1.png' alt="prodectdisc1" />
                       <ProductCard
@@ -219,7 +216,6 @@ export default function ProductsWithDiscounts() {
                       />
                     </div>
 
-                    {/* Row 2 */}
                     <div className="content-stretch flex gap-[16px] items-center justify-start relative shrink-0 w-full overflow-x-auto">
                       <img src='images/prodectdisc2.png' alt="prodectdisc2" />
                       <ProductCard
@@ -236,7 +232,6 @@ export default function ProductsWithDiscounts() {
                       />
                     </div>
 
-                    {/* Row 3 */}
                     <div className="content-stretch flex gap-[16px] items-center justify-start relative shrink-0 w-full overflow-x-auto">
                       <img src='images/prodectdisc3.png' alt="prodectdisc3" />
                       <ProductCard
