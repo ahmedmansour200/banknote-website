@@ -60,6 +60,9 @@ function SectionHeader({ onPrev, onNext }: { onPrev: () => void; onNext: () => v
 
 export default function FeaturedCategories() {
   const [startIndex, setStartIndex] = useState(0);
+
+
+  // convenience to add the product at startIndex
   const [quantities, setQuantities] = useState<Record<string, number>>({});
   const { addToCart } = useCart();
 
@@ -95,7 +98,7 @@ export default function FeaturedCategories() {
   };
 
   const handleAddToCart = (productId: string) => {
-    const quantity = quantities[productId] || 0;
+    const quantity = quantities[productId] || 0 || quantities[startIndex];
     if (quantity > 0) {
       const product = products.find(p => p.id === productId);
       if (product) {
