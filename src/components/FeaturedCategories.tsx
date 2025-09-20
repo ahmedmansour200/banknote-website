@@ -97,6 +97,8 @@ export default function FeaturedCategories() {
     }));
   };
 
+  const visibleProductsList = products.slice(startIndex, startIndex + visibleProducts);
+
   const handleAddToCart = (productId: string) => {
     const quantity = quantities[productId] || 0;
     if (quantity > 0) {
@@ -138,8 +140,6 @@ export default function FeaturedCategories() {
       });
     }
   };
-
-  const visibleProductsList = products.slice(startIndex, startIndex + visibleProducts);
 
   return (
     <div className="w-full bg-white py-8 sm:py-12 lg:py-16">
