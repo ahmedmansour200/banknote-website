@@ -174,6 +174,8 @@ The project uses ESLint for maintaining code quality and consistency. All cart-r
 
 ## 🔧 Configuration
 
+### Expanding the ESLint configuration
+
 If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
 ```js
@@ -204,6 +206,8 @@ export default tseslint.config([
 ])
 ```
 
+### React-specific lint rules
+
 You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
 ```js
@@ -232,4 +236,24 @@ export default tseslint.config([
   },
 ])
 ```
+
+## 📝 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 🤝 Contributing
+
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📞 Support
+
+If you have any questions or need help with the cart functionality, please open an issue on GitHub.
+
+---
+
+**Happy Shopping! 🛒✨**
 
