@@ -65,7 +65,7 @@ export default function CategorySection({ title, categories, isProducts = false 
         <ShopAllButton />
       </div>
 
-      <div className="grid justify-center md:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6 w-full" data-name="Categories Grid">
+      <div className="grid grid-rows-1 justify-center md:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6 w-full" data-name="Categories Grid">
         {categories.map((ele, index) => (
           isProducts ?
             <ProductCard

@@ -98,7 +98,7 @@ export default function FeaturedCategories() {
   };
 
   const handleAddToCart = (productId: string) => {
-    const quantity = quantities[productId] || 0 || quantities[startIndex];
+    const quantity = quantities[productId] || 0;
     if (quantity > 0) {
       const product = products.find(p => p.id === productId);
       if (product) {
@@ -139,6 +139,7 @@ export default function FeaturedCategories() {
     }
   };
 
+  const visibleProductsList = products.slice(startIndex, startIndex + visibleProducts);
 
   return (
     <div className="w-full bg-white py-8 sm:py-12 lg:py-16">
@@ -146,8 +147,8 @@ export default function FeaturedCategories() {
       <div className="content-stretch flex flex-col gap-[24px] sm:gap-[32px] items-center justify-center relative size-full">
         <SectionHeader onPrev={handlePrev} onNext={handleNext} />
 
-        <div className="grid justify-center md:grid-cols-3 lg:grid-cols-6 gap-4 lg:gap-[24px] w-full">
-        {products.map((product) => (
+        <div className="grid grid-rows-1 justify-center md:grid-cols-3 lg:grid-cols-6 gap-4 lg:gap-[24px] w-full">
+            {visibleProductsList.map((product) => (
           <ProductCard
           key={product.id}
           product={product}
