@@ -46,7 +46,7 @@ function Arrows({ onPrev, onNext }: { onPrev: () => void; onNext: () => void }) 
 
 function SectionHeader({ onPrev, onNext }: { onPrev: () => void; onNext: () => void }) {
   return (
-    <div className="content-stretch flex flex-col sm:flex-row items-center justify-between relative shrink-0 w-full gap-4 sm:gap-0">
+    <div className="content-stretch flex  items-center justify-between relative shrink-0 w-full gap-4 sm:gap-0">
       <div className="font-['Radley:Regular',_sans-serif] leading-[0] not-italic relative shrink-0 text-[20px] sm:text-[24px] lg:text-[28px] text-black text-center text-nowrap">
         <p className="leading-[normal] whitespace-pre">Featured Grocery</p>
       </div>
@@ -136,29 +136,28 @@ export default function FeaturedCategories() {
     }
   };
 
-  const visibleProductsList = products.slice(startIndex, startIndex + visibleProducts);
 
   return (
     <div className="w-full bg-white py-8 sm:py-12 lg:py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="content-stretch flex flex-col gap-[24px] sm:gap-[32px] items-start justify-start relative size-full">
-          <SectionHeader onPrev={handlePrev} onNext={handleNext} />
+      <div className="content-stretch flex flex-col gap-[24px] sm:gap-[32px] items-center justify-center relative size-full">
+        <SectionHeader onPrev={handlePrev} onNext={handleNext} />
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 lg:gap-[24px] w-full">
-            {visibleProductsList.map((product) => (
-              <ProductCard
-                key={product.id}
-                product={product}
-                quantity={quantities[product.id] || 0}
-                onQuantityChange={handleQuantityChange}
-                onAddToCart={handleAddToCart}
-                onWishlistClick={handleWishlistClick}
-                onCompareClick={handleCompareClick}
-                onQuickAddToCart={handleQuickAddToCart}
-              />
-            ))}
-          </div>
+        <div className="grid justify-center md:grid-cols-3 lg:grid-cols-6 gap-4 lg:gap-[24px] w-full">
+        {products.map((product) => (
+          <ProductCard
+          key={product.id}
+          product={product}
+          quantity={quantities[product.id] || 0}
+          onQuantityChange={handleQuantityChange}
+          onAddToCart={handleAddToCart}
+          onWishlistClick={handleWishlistClick}
+          onCompareClick={handleCompareClick}
+          onQuickAddToCart={handleQuickAddToCart}
+          />
+        ))}
         </div>
+      </div>
       </div>
     </div>
   );

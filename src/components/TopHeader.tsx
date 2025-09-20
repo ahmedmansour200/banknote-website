@@ -1,103 +1,73 @@
 import imgLogo from "../assets/logo.png";
 import { useCart } from "../context/CarContext";
 
-
-
-function DeliverTo() {
-  return (
-    <div className="content-stretch flex gap-[8px] items-center justify-start relative shrink-0" data-name="Deliver to">
-      <div className="overflow-clip relative shrink-0 size-[26px]" data-name="akar-icons:location">
-      <img src='./icons/ep_location.svg' alt="location" />
-    </div>
-       <div className="content-stretch flex flex-col items-start justify-start relative shrink-0">
-      <div className="font-['Radley:Regular',_sans-serif] leading-[0] not-italic relative shrink-0 text-[14px] text-black text-nowrap">
-        <p className="leading-[normal] whitespace-pre">Deliver to:</p>
-      </div>
-       <div className="content-stretch flex gap-[4px] items-center justify-start relative shrink-0 w-full cursor-pointer" data-name="Mode">
-      <div className="font-['Radley:Regular',_sans-serif] leading-[0] not-italic relative shrink-0 text-[16px] text-black text-nowrap">
-        <p className="leading-[normal] whitespace-pre">Egypt</p>
-      </div>
-      <div className="flex h-[12px] items-center justify-center relative shrink-0 w-[24px]">
-        <div className="flex-none">
-                <img src='./icons/weui_arrow-outlined.svg' className="w-7 h-7 brightness-0 " alt="more" />
-
-        </div>
-      </div>
-    </div>
-    </div>
-    </div>
-  );
-}
-
-function Mode1() {
-  return (
-    <div className="content-stretch flex gap-[4px] items-center justify-start relative shrink-0 cursor-pointer" data-name="Mode">
-      <div className="font-['Radley:Regular',_sans-serif] leading-[0] not-italic relative shrink-0 text-[#0e0e0e] text-[16px] text-nowrap">
-        <p className="leading-[24px] whitespace-pre">White Mode</p>
-      </div>
-      <div className="flex h-[12px] items-center justify-center relative shrink-0 w-[24px]">
-        <div className="flex-none">
-                          <img src='./icons/weui_arrow-outlined.svg' className="w-7 h-7 brightness-0 " alt="more" />
-
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function Language() {
-  return (
-    <div className="content-stretch flex gap-[4px] items-center justify-start relative shrink-0 cursor-pointer" data-name="Language">
-      <div className="font-['Radley:Regular',_sans-serif] leading-[0] not-italic relative shrink-0 text-[#0e0e0e] text-[16px] text-nowrap">
-        <p className="leading-[24px] whitespace-pre">English</p>
-      </div>
-      <div className="flex h-[12px] items-center justify-center relative shrink-0 w-[24px]">
-        <div className="flex-none">
-                          <img src='./icons/weui_arrow-outlined.svg' className="w-7 h-7 brightness-0" alt="more" />
-
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function TopLinksLikeWhiteModeLanguage() {
-  return (
-    <div className="content-stretch flex flex-wrap gap-[16px] lg:gap-[32px] items-center justify-start relative shrink-0" data-name="Top links like White mode & Language">
-      <Mode1 />
-      <Language />
-      <div className="font-['Radley:Regular',_sans-serif] leading-[0] not-italic relative shrink-0 text-[#0e0e0e] text-[16px] text-nowrap cursor-pointer hover:text-[#c39c45] transition-colors">
-        <p className="leading-[24px] whitespace-pre">Track Order</p>
-      </div>
-      <div className="font-['Radley:Regular',_sans-serif] leading-[0] not-italic relative shrink-0 text-[#0e0e0e] text-[16px] text-nowrap cursor-pointer hover:text-[#c39c45] transition-colors">
-        <p className="leading-[24px] whitespace-pre">Become a supplier</p>
-      </div>
-    </div>
-  );
-}
-
-function TopNav() {
-  return (
-    <div className="content-stretch flex flex-col lg:flex-row gap-4 lg:gap-0 items-start lg:items-center justify-between  relative shrink-0 w-full max-w-7xl mx-auto" data-name="TOP NAV">
-      <DeliverTo />
-      <TopLinksLikeWhiteModeLanguage />
-    </div>
-  );
-}
-
 function TopNavbar() {
   return (
-    <div className="bg-[#e2c774] relative shrink-0 w-full" data-name="TOP Navbar">
-      <div className="flex flex-col items-center justify-center relative w-full">
-        <div className="box-border content-stretch flex flex-col gap-[10px] items-center justify-center px-4 md:px-8 lg:px-[108px] py-[16px] relative w-full">
-          <TopNav />
+   <div className="bg-[#e2c774] w-full" data-name="TOP Navbar">
+  <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between px-4 md:px-8 lg:px-[108px] py-2 md:py-3 lg:py-4 gap-2 sm:gap-4">
+    
+    {/* Deliver to */}
+    <div className="flex items-center gap-2 sm:gap-3 cursor-pointer">
+      <img
+        src="./icons/ep_location.svg"
+        alt="location"
+        className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 lg:w-7 lg:h-7"
+      />
+      <div className="flex flex-col leading-none">
+        <span className="text-[10px] sm:text-xs md:text-sm lg:text-base text-black">
+          Deliver to:
+        </span>
+        <div className="flex items-center gap-1 sm:gap-2">
+          <span className="text-xs sm:text-sm md:text-base lg:text-lg text-black">
+            Egypt
+          </span>
+          <img
+            src="./icons/weui_arrow-outlined.svg"
+            alt="more"
+            className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 brightness-0"
+          />
         </div>
       </div>
     </div>
+
+    {/* Links */}
+    <div className="flex flex-wrap items-center justify-center sm:justify-end gap-3 sm:gap-4 md:gap-6 lg:gap-8 text-[#0e0e0e]">
+      
+      {/* White Mode */}
+      <div className="flex items-center gap-1 sm:gap-2 cursor-pointer">
+        <span className="text-xs sm:text-sm md:text-base lg:text-lg">White Mode</span>
+        <img
+          src="./icons/weui_arrow-outlined.svg"
+          alt="more"
+          className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 brightness-0"
+        />
+      </div>
+
+      {/* Language */}
+      <div className="flex items-center gap-1 sm:gap-2 cursor-pointer">
+        <span className="text-xs sm:text-sm md:text-base lg:text-lg">English</span>
+        <img
+          src="./icons/weui_arrow-outlined.svg"
+          alt="more"
+          className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 brightness-0"
+        />
+      </div>
+
+      {/* Track Order */}
+      <span className="text-xs sm:text-sm md:text-base lg:text-lg cursor-pointer hover:text-[#c39c45] transition-colors">
+        Track Order
+      </span>
+
+      {/* Become a supplier (hidden on mobile) */}
+      <span className="hidden sm:inline text-xs sm:text-sm md:text-base lg:text-lg cursor-pointer hover:text-[#c39c45] transition-colors">
+        Become a supplier
+      </span>
+    </div>
+  </div>
+</div>
+
   );
 }
-
-
 
 
 function CategoriesButton() {
@@ -145,14 +115,6 @@ function SearchInput() {
   );
 }
 
-function CategoriesSearch() {
-  return (
-    <div className="content-stretch flex flex-col sm:flex-row gap-[8px] items-center justify-start relative shrink-0 w-full sm:w-fit" data-name="Categories & search">
-      <CategoriesButton />
-      <SearchInput />
-    </div>
-  );
-}
 
 
 
@@ -240,111 +202,109 @@ function Cart() {
   );
 }
 
-function Links() {
-  return (
-    <div className="flex gap-[8px] relative items-center justify-start w-full" data-name="Links">
-      <Account />
-      <Compare />
-      <Wishlist />
-      <Cart />
-    </div>
-  );
-}
-
 
 function MainHeader() {
   return (
-    <div className="bg-white relative shrink-0 w-full overflow-x-hidden ">
-      <div className="flex flex-col items-center justify-center relative w-full">
-        <div className="box-border content-stretch flex flex-col gap-[10px] items-center justify-center px-4 md:px-8 lg:px-[108px] py-[16px] relative w-full">
-            <div className=" flex flex-col lg:flex-row gap-[12px] items-center justify-start lg:justify-start relative w-full max-w-7xl">
-      <div className="bg-center bg-cover bg-no-repeat size-[134px]" data-name="Logo" style={{ backgroundImage: `url('${imgLogo}')` }} />
-      <div className="flex md:flex-row xl:flex-row gap-4 items-center justify-center xl:justify-between relative w-full">
-        <div className="w-full xl:w-auto">
-          <CategoriesSearch />
+<div className="bg-white w-full overflow-x-hidden">
+  <div className="flex flex-col items-center w-full">
+    <div className="flex flex-col xl:flex-row gap-4 items-center lg:items-center justify-between px-4 md:px-8 lg:px-[108px] py-2 md:py-3 lg:py-4 w-full max-w-7xl mx-auto">
+      
+      {/* Logo */}
+      <div
+        className="bg-center bg-cover bg-no-repeat w-[100px] h-[100px] sm:w-[120px] sm:h-[120px] lg:w-[134px] lg:h-[134px] flex-shrink-0"
+        style={{ backgroundImage: `url('${imgLogo}')` }}
+        data-name="Logo"
+      />
+
+      {/* Categories & Search */}
+      <div
+        className="flex flex-col sm:flex-row gap-2 lg:gap-3 items-center justify-center w-full lg:flex-1"
+        data-name="Categories & search"
+      >
+        <div className="w-full sm:w-auto flex-shrink-0">
+          <CategoriesButton />
         </div>
-        <div className="w-full xl:w-auto flex justify-center xl:justify-end">
-          <Links />
+        <div className="w-full sm:flex-1">
+          <SearchInput />
         </div>
       </div>
-            </div>
-        </div>
+
+      {/* Action Links */}
+      <div
+        className="flex flex-col sm:flex-row gap-3 mt-3 lg:mt-0"
+        data-name="Links"
+      >
+        <Account />
+        <Compare />
+        <Wishlist />
+        <Cart />
       </div>
     </div>
+  </div>
+</div>
+
   );
 }
 
-function Links1() {
-  return (
-    <div className="content-stretch flex flex-wrap font-['Radley:Regular',_sans-serif] gap-[16px] lg:gap-[32px] items-center justify-start not-italic relative shrink-0 text-[18px] text-black text-center text-nowrap" data-name="Links">
-      <div className="relative shrink-0 cursor-pointer hover:text-[#c39c45] transition-colors">
-        <p className="leading-[normal] text-nowrap whitespace-pre">Home</p>
-      </div>
-      <div className="relative shrink-0 cursor-pointer hover:text-[#c39c45] transition-colors">
-        <p className="leading-[normal] text-nowrap whitespace-pre">About</p>
-      </div>
-      <div className="relative shrink-0 cursor-pointer hover:text-[#c39c45] transition-colors">
-        <p className="leading-[normal] text-nowrap whitespace-pre">Shop</p>
-      </div>
-      <div className="relative shrink-0 cursor-pointer hover:text-[#c39c45] transition-colors">
-        <p className="leading-[normal] text-nowrap whitespace-pre">Contact</p>
-      </div>
-      <div className="relative shrink-0 cursor-pointer hover:text-[#c39c45] transition-colors">
-        <p className="leading-[normal] text-nowrap whitespace-pre">Orders</p>
-      </div>
-    </div>
-  );
-}
-
-function Sale() {
-  return (
-    <div className="bg-white box-border content-stretch flex gap-[10px] items-center justify-center px-[8px] py-0 relative rounded-[25px] shrink-0" data-name="Sale">
-      <div className="font-['Radley:Regular',_sans-serif] leading-[0] not-italic relative shrink-0 text-[#c39c45] text-[18px] text-center text-nowrap">
-        <p className="leading-[normal] whitespace-pre">Sale</p>
-      </div>
-    </div>
-  );
-}
-
-function Discount() {
-  return (
-    <div className="w-[314px] rounded-bl-[40px] rout h-[60px] bg-[#c39c45] content-stretch flex gap-[8px] items-center justify-center relative px-4 py-2" data-name="discount">
-      <div className="font-['Radley:Regular',_sans-serif] leading-[0] not-italic relative shrink-0 text-[18px] text-center text-nowrap text-white">
-        <p className="leading-[normal] whitespace-pre">Get 20% Discount Now</p>
-      </div>
-      <Sale />
-    </div>
-  );
-}
-
-function NavLink() {
-  return (
-    <div className="content-stretch flex flex-col lg:flex-row items-center justify-between relative w-full max-w-7xl mx-auto" data-name="Nav Link">
-      <Links1 />
-      <div className="hidden lg:block">
-        <Discount />
-      </div>
-    </div>
-  );
-}
 
 function Navbar() {
   return (
-    <div className="bg-white relative shrink-0 w-full" data-name="Navbar">
-      <div className="flex flex-col items-center justify-center relative w-full">
-      <div className="h-[0.5px] bg-[#C39C45] relative shrink-0 w-full" data-name="Line 1 (Stroke)" />
-        <div className=" content-stretch flex flex-col gap-[10px] items-center justify-center px-4 md:px-8 lg:px-[108px] relative w-full">
-          <NavLink />
+    <div className="bg-white w-full" data-name="Navbar">
+  {/* Top border line */}
+  <div className="h-[0.5px] bg-[#C39C45] w-full" />
+
+  <div className="flex flex-col items-center px-4 md:px-8 lg:px-[108px] w-full">
+    <div
+      className="flex flex-col lg:flex-row items-center justify-between w-full max-w-7xl mx-auto gap-4 py-3"
+      data-name="Nav Link"
+    >
+      {/* Navigation Links */}
+      <div
+        className="flex flex-wrap justify-center lg:justify-start gap-4 md:gap-6 lg:gap-8 text-[16px] md:text-[18px] font-['Radley',_sans-serif] text-black"
+        data-name="Links"
+      >
+        {["Home", "About", "Shop", "Contact", "Orders"].map((link) => (
+          <p
+            key={link}
+            className="cursor-pointer hover:text-[#c39c45] transition-colors whitespace-nowrap"
+          >
+            {link}
+          </p>
+        ))}
+      </div>
+
+      {/* Discount Banner (only visible on lg and above) */}
+      <div className="hidden lg:flex items-center justify-center">
+        <div
+          className="w-[280px] xl:w-[314px] h-[60px] bg-[#c39c45] flex items-center justify-center gap-2 px-4 rounded-bl-[40px]"
+          data-name="discount"
+        >
+          <p className="text-white text-[16px] xl:text-[18px] font-['Radley',_sans-serif]">
+            Get 20% Discount Now
+          </p>
+          <div
+            className="bg-white px-3 py-1 rounded-[25px] flex items-center justify-center"
+            data-name="Sale"
+          >
+            <p className="text-[#c39c45] text-[16px] xl:text-[18px] font-['Radley',_sans-serif]">
+              Sale
+            </p>
+          </div>
         </div>
       </div>
-      <div className="h-[0.5px] bg-[#C39C45] relative shrink-0 w-full" data-name="Line 1 (Stroke)" />
     </div>
+  </div>
+
+  {/* Bottom border line */}
+  <div className="h-[0.5px] bg-[#C39C45] w-full" />
+</div>
+
   );
 }
 
 export default function TopHeader() {
   return (
-    <div className="content-stretch flex flex-col items-center justify-start relative w-full" data-name="Top header">
+    <div className="flex flex-col items-center justify-start relative w-full" data-name="Top header">
       <TopNavbar />
       <MainHeader />
       <Navbar />

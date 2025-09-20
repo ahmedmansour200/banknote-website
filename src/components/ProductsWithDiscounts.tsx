@@ -106,7 +106,7 @@ const handleAddToCartClick = () => {
         onAddToCart?.(product.id);
     };
   return (
-    <div className="bg-[#fbf3d9] box-border content-stretch flex gap-[10px] h-[154px] items-center justify-start p-[8px] sm:p-[12px] relative rounded-[4px] shrink-0 w-full max-w-[382px] min-w-[280px]" data-name="Product Card width">
+    <div className="bg-[#fbf3d9] box-border content-stretch flex gap-[10px] h-[154px] items-center justify-start p-[8px] sm:p-[12px] relative rounded-[4px] shrink-0 w-full max-w-[382px] min-w-[370px]" data-name="Product Card width">
       <div className="content-stretch flex gap-[12px] sm:gap-[16px] items-start justify-start relative shrink-0 w-full" data-name="Card info">
         <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] place-items-start relative shrink-0">
           <div className="[grid-area:1_/_1] bg-bottom bg-no-repeat bg-size-[100.06%_135.94%] box-border content-stretch flex gap-[10px] h-[130px] items-center justify-center ml-0 mt-0 px-[36px] py-[15px] relative rounded-[4px] w-[160px]" data-name="Background card product" style={{ backgroundImage: `url('${imgBackgroundCardProduct}')` }}>

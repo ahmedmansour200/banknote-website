@@ -58,14 +58,14 @@ export default function CategorySection({ title, categories, isProducts = false 
 
   return (
     <div className="content-stretch flex flex-col gap-[32px] items-start justify-start relative shrink-0 w-full" data-name="Category Section">
-      <div className="content-stretch flex flex-col sm:flex-row gap-4 sm:gap-0 items-start sm:items-center justify-between relative shrink-0 w-full" data-name="Section Header">
+      <div className="content-stretch flex gap-4 sm:gap-0  justify-between relative shrink-0 w-full flex-wrap" data-name="Section Header">
         <div className="font-['Radley:Regular',_sans-serif] leading-[0] not-italic relative shrink-0 text-[20px] sm:text-[24px] lg:text-[28px] text-black text-center text-nowrap">
           <p className="leading-[normal] whitespace-pre">{title}</p>
         </div>
         <ShopAllButton />
       </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6 w-full" data-name="Categories Grid">
+      <div className="grid justify-center md:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6 w-full" data-name="Categories Grid">
         {categories.map((ele, index) => (
           isProducts ?
             <ProductCard

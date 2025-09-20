@@ -1,58 +1,4 @@
-const information = [
-  {
-    id: 1,
-    icon: './icons/ep_location.svg',
-    text: '123 Main Street, Suite 100 Downtown Area - City Center, State, Country',
-    alt: 'Location'
-  },
-  {
-    id: 2,
-    icon: './icons/bi_telephone.svg',
-    text: '+1 (555) 123-4567',
-    alt: 'Phone'
-  },
-  {
-    id: 3,
-    icon: './icons/ic_outline-mail.svg',
-    text: 'info@homestore.com',
-    alt: 'Email'
-  }
-];
-
-const shopWithUsLinks = [
-  { id: 1, text: 'New Arrivals' },
-  { id: 2, text: 'Best Sellers' },
-  { id: 3, text: 'Sale Items' },
-  { id: 4, text: 'Categories' },
-  { id: 5, text: 'Gift Cards' }
-];
-
-const helpLinks = [
-  { id: 1, text: 'Customer Service' },
-  { id: 2, text: 'FAQ' },
-  { id: 3, text: 'Terms of Service' },
-  { id: 4, text: 'Privacy Policy' },
-  { id: 5, text: 'Return Policy' }
-];
-
-const iconsLink = [
-  { svgPath: 'icons/Iconsfa.svg', alt: 'Facebook' },
-  { svgPath: 'icons/IconsInstagram.svg', alt: 'Instagram' },
-  { svgPath: 'icons/IconsWhatsapp.svg', alt: 'Whatsapp' },
-  { svgPath: 'icons/IconsLinkedIn.svg', alt: 'LinkedIn' },
-  { svgPath: 'icons/IconsTicTok.svg', alt: 'TicTok' },
-  { svgPath: 'icons/IconsTelegram.svg', alt: 'Telegram' },
-];
-
-const iconCreditCard = [
-  { svgPath: 'icons/credit-card.svg', alt: 'credit-card' },
-  { svgPath: 'icons/Mastercard.svg', alt: 'Mastercard' },
-  { svgPath: 'icons/PayPal.svg', alt: 'PayPal' },
-  { svgPath: 'icons/GooglePay.svg', alt: 'GooglePay' },
-  { svgPath: 'icons/credit-card-1.svg', alt: 'credit-card-1' },
-  { svgPath: 'icons/ValU.svg', alt: 'ValU' },
-  { svgPath: 'icons/download 2.svg', alt: 'download-2' },
-];
+import { helpLinks, iconCreditCard, iconsLink, information, shopWithUsLinks } from "../data";
 
 function ContactInformation() {
   return (
@@ -260,17 +206,19 @@ function FooterDarkSection() {
 
 function AppDownloadSection() {
   return (
-    <div className="content-stretch flex gap-[24px] items-center justify-start relative shrink-0" data-name="Download App">
-      <div className="font-['Cairo:SemiBold',_sans-serif] font-semibold leading-[0] not-italic relative shrink-0 text-[16px] text-black">
-        <p className="leading-[24px]" dir="auto">
-          Download App
-        </p>
+    <div className="content-stretch flex flex-col sm:flex-row gap-4 sm:gap-[24px] items-center justify-start relative shrink-0" data-name="Download App">
+      <div className="font-['Cairo:SemiBold',_sans-serif] font-semibold leading-[0] not-italic relative shrink-0 text-[14px] sm:text-[16px] text-black text-center sm:text-left">
+      <p className="leading-[20px] sm:leading-[24px]" dir="auto">
+        Download App
+      </p>
       </div>
-      <div className="h-[35px] relative shrink-0 w-[107px]" data-name="image google">
-        <img className="block max-w-none size-full" height="35" src='./images/google-play-store.png' width="107" alt="Google Play Store" />
+      <div className="flex gap-3 sm:gap-[24px] items-center justify-center sm:justify-start">
+      <div className="h-[30px] sm:h-[35px] relative shrink-0 w-[92px] sm:w-[107px]" data-name="image google">
+        <img className="block max-w-none size-full" src='./images/google-play-store.png' alt="Google Play Store" />
       </div>
-      <div className="h-[35px] relative shrink-0 w-[107px]" data-name="image App store">
-        <img className="block max-w-none size-full" height="35" src='images/apple-app-store.png' width="107" alt="Apple App Store" />
+      <div className="h-[30px] sm:h-[35px] relative shrink-0 w-[92px] sm:w-[107px]" data-name="image App store">
+        <img className="block max-w-none size-full" src='images/apple-app-store.png' alt="Apple App Store" />
+      </div>
       </div>
     </div>
   );

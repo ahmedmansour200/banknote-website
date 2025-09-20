@@ -5,7 +5,108 @@ import imgImage287 from "../assets/featured-product-4.png";
 import imgImage77 from "../assets/featured-product-5.png";
 import imgImage258 from "../assets/featured-product-6.png";
 import type { Product } from "../interfaces";
+import imgImg61671 from "../assets/product-img-1.png";
+import imgDeliciousCoffeeCupsWithFoamAssortment1 from "../assets/coffee-cups-foam.png";
+import imgImg61721 from "../assets/product-img-2.png";
+import imgScreenshot202508171722431 from "../assets/screenshot-product.png";
+import imgImg61731 from "../assets/product-img-4.png";
+import imgImg61711 from "../assets/product-img-5.png";
+import imgHighAngleEcoFriendlyProductsArrangement1 from "../assets/eco-friendly-products.png";
+import imgNaturalArganOilComposition1 from "../assets/argan-oil-composition.png";
+import imgNaturalSelfCareProductsComposition1 from "../assets/self-care-products.png";
+import imgImg61621 from "../assets/product-img-3.png";
+import imgImg61631 from "../assets/product-img-6.png";
+import imgCloseUpBottlesWithOilPillsTable1 from "../assets/bottles-oil-pills.png";
+import imgImage from "../assets/category-img-1.png";
+import imgImage1 from "../assets/category-img-2.png";
+import imgImage2 from "../assets/category-img-3.png";
+import imgImage3 from "../assets/category-img-4.png";
+import imgRectangle from "../assets/rectangle-element.png";
+import imgImage4 from "../assets/category-img-5.png";
+import type { Category } from "../interfaces";
 
+
+
+export const householdSuppliesCategories: Category[] = [
+  {
+    name: "Dinner Sets",
+    image: imgImg61671
+  },
+  {
+    name: "Drinkware",
+    image: imgDeliciousCoffeeCupsWithFoamAssortment1
+  },
+  {
+    name: "Kitchen Items",
+    image: imgImg61721
+  },
+  {
+    name: "Dutch Oven",
+    image: imgScreenshot202508171722431
+  },
+  {
+    name: "Hanging Fork Knife",
+    image: imgImg61731
+  },
+  {
+    name: "Storage Boxes",
+    image: imgImg61711
+  }
+];
+
+export const beautyCategories: Category[] = [
+  {
+    name: "Skin Care",
+    image: imgHighAngleEcoFriendlyProductsArrangement1
+  },
+  {
+    name: "Perfumes",
+    image: imgNaturalArganOilComposition1
+  },
+  {
+    name: "Hair Care",
+    image: imgNaturalSelfCareProductsComposition1
+  },
+  {
+    name: "Body Care",
+    image: imgImg61621
+  },
+  {
+    name: "Health & Personal Care",
+    image: imgImg61631
+  },
+  {
+    name: "Natural & Essential",
+    image: imgCloseUpBottlesWithOilPillsTable1
+  }
+];
+
+export const furnitureCategories: Category[] = [
+  {
+    name: "Coffee Table",
+    image: imgImage
+  },
+  {
+    name: "Sofa",
+    image: imgImage1
+  },
+  {
+    name: "TV Tables",
+    image: imgImage2
+  },
+  {
+    name: "Bedroom",
+    image: imgImage3
+  },
+  {
+    name: "Desks & Chairs",
+    image: imgRectangle
+  },
+  {
+    name: "Wardrobe",
+    image: imgImage4
+  }
+];
 
 export const products: Product[] = [
   {
@@ -102,4 +203,61 @@ export const smallProductImages = [
   "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxob21lJTIwZGVjb3J8ZW58MXx8fHwxNzU4MDA4MzUzfDA&ixlib=rb-4.1.0&q=80&w=400",
   "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxob21lJTIwZGVjb3J8ZW58MXx8fHwxNzU4MDA4MzUzfDA&ixlib=rb-4.1.0&q=80&w=400",
   "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmdXJuaXR1cmUlMjBjaGFpcnxlbnwxfHx8fDE3NTgwMzkxNDd8MA&ixlib=rb-4.1.0&q=80&w=400"
+];
+
+
+export const information = [
+  {
+    id: 1,
+    icon: './icons/ep_location.svg',
+    text: '123 Main Street, Suite 100 Downtown Area - City Center, State, Country',
+    alt: 'Location'
+  },
+  {
+    id: 2,
+    icon: './icons/bi_telephone.svg',
+    text: '+1 (555) 123-4567',
+    alt: 'Phone'
+  },
+  {
+    id: 3,
+    icon: './icons/ic_outline-mail.svg',
+    text: 'info@homestore.com',
+    alt: 'Email'
+  }
+];
+
+export const shopWithUsLinks = [
+  { id: 1, text: 'New Arrivals' },
+  { id: 2, text: 'Best Sellers' },
+  { id: 3, text: 'Sale Items' },
+  { id: 4, text: 'Categories' },
+  { id: 5, text: 'Gift Cards' }
+];
+
+export const helpLinks = [
+  { id: 1, text: 'Customer Service' },
+  { id: 2, text: 'FAQ' },
+  { id: 3, text: 'Terms of Service' },
+  { id: 4, text: 'Privacy Policy' },
+  { id: 5, text: 'Return Policy' }
+];
+
+export const iconsLink = [
+  { svgPath: 'icons/Iconsfa.svg', alt: 'Facebook' },
+  { svgPath: 'icons/IconsInstagram.svg', alt: 'Instagram' },
+  { svgPath: 'icons/IconsWhatsapp.svg', alt: 'Whatsapp' },
+  { svgPath: 'icons/IconsLinkedIn.svg', alt: 'LinkedIn' },
+  { svgPath: 'icons/IconsTicTok.svg', alt: 'TicTok' },
+  { svgPath: 'icons/IconsTelegram.svg', alt: 'Telegram' },
+];
+
+export const iconCreditCard = [
+  { svgPath: 'icons/credit-card.svg', alt: 'credit-card' },
+  { svgPath: 'icons/Mastercard.svg', alt: 'Mastercard' },
+  { svgPath: 'icons/PayPal.svg', alt: 'PayPal' },
+  { svgPath: 'icons/GooglePay.svg', alt: 'GooglePay' },
+  { svgPath: 'icons/credit-card-1.svg', alt: 'credit-card-1' },
+  { svgPath: 'icons/ValU.svg', alt: 'ValU' },
+  { svgPath: 'icons/download 2.svg', alt: 'download-2' },
 ];
