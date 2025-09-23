@@ -1,73 +1,7 @@
 import imgLogo from "../assets/logo.png";
 import { useCart } from "../context/CarContext";
-
-function TopNavbar() {
-  return (
-   <div className="bg-[#e2c774] w-full" data-name="TOP Navbar">
-  <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between px-4 md:px-8 lg:px-[108px] py-2 md:py-3 lg:py-4 gap-2 sm:gap-4">
-    
-    {/* Deliver to */}
-    <div className="flex items-center gap-2 sm:gap-3 cursor-pointer">
-      <img
-        src="./icons/ep_location.svg"
-        alt="location"
-        className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 lg:w-7 lg:h-7"
-      />
-      <div className="flex flex-col leading-none">
-        <span className="text-[10px] sm:text-xs md:text-sm lg:text-base text-black">
-          Deliver to:
-        </span>
-        <div className="flex items-center gap-1 sm:gap-2">
-          <span className="text-xs sm:text-sm md:text-base lg:text-lg text-black">
-            Egypt
-          </span>
-          <img
-            src="./icons/weui_arrow-outlined.svg"
-            alt="more"
-            className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 brightness-0"
-          />
-        </div>
-      </div>
-    </div>
-
-    {/* Links */}
-    <div className="flex flex-wrap items-center justify-center sm:justify-end gap-3 sm:gap-4 md:gap-6 lg:gap-8 text-[#0e0e0e]">
-      
-      {/* White Mode */}
-      <div className="flex items-center gap-1 sm:gap-2 cursor-pointer">
-        <span className="text-xs sm:text-sm md:text-base lg:text-lg">White Mode</span>
-        <img
-          src="./icons/weui_arrow-outlined.svg"
-          alt="more"
-          className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 brightness-0"
-        />
-      </div>
-
-      {/* Language */}
-      <div className="flex items-center gap-1 sm:gap-2 cursor-pointer">
-        <span className="text-xs sm:text-sm md:text-base lg:text-lg">English</span>
-        <img
-          src="./icons/weui_arrow-outlined.svg"
-          alt="more"
-          className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 brightness-0"
-        />
-      </div>
-
-      {/* Track Order */}
-      <span className="text-xs sm:text-sm md:text-base lg:text-lg cursor-pointer hover:text-[#c39c45] transition-colors">
-        Track Order
-      </span>
-
-      {/* Become a supplier (hidden on mobile) */}
-      <span className="hidden sm:inline text-xs sm:text-sm md:text-base lg:text-lg cursor-pointer hover:text-[#c39c45] transition-colors">
-        Become a supplier
-      </span>
-    </div>
-  </div>
-</div>
-
-  );
-}
+import Container from "./ui/Container";
+import TopNavbar from "./ui/TopNavbar";
 
 
 function CategoriesButton() {
@@ -185,10 +119,10 @@ function Cart() {
     <div className="box-border content-stretch flex flex-col gap-[10px] h-[48px] items-center justify-center px-[16px] py-[7px] relative rounded-[4px] shrink-0 cursor-pointer hover:bg-[var(--main-color)] transition-colors">
       <div aria-hidden="true" className="absolute border border-[#c5c5c3] border-solid inset-0 pointer-events-none rounded-[4px] shadow-[0px_0.4px_6px_0px_#c2baac]" />
        <div className="content-stretch flex gap-[4px] h-[29px] items-end justify-center leading-[0] relative shrink-0" data-name="cart">
-       <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0" data-name="cart">
-         <img src="./icons/ion_cart-outline.svg" alt="account"/>
+       <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative" data-name="cart">
+         <img src="./icons/ion_cart-outline.svg" className="w-6 h-6 brightness-0" alt="cart"/>
 
-         <div className="[grid-area:1_/_1] bg-[#e2c774] box-border content-stretch flex flex-col gap-[10px] items-center justify-center ml-[10.954px] mt-0 px-[6px] py-[2px] relative rounded-[10px] size-[16px]" data-name="counter">
+     <div className="[grid-area:1_/_1] bg-[#e2c774] box-border content-stretch flex flex-col gap-2 items-center justify-center ml-[10.954px] mt-2 px-[6px] py-[2px] relative rounded-[10px] size-[16px]" data-name="counter">
       <div className="font-['Cairo:SemiBold',_sans-serif] font-semibold leading-[0] not-italic relative shrink-0 text-[12px] text-nowrap text-white">
         <p className="leading-[14px] whitespace-pre">{cartCount}</p>
       </div>
@@ -205,16 +139,17 @@ function Cart() {
 
 function MainHeader() {
   return (
-<div className="bg-white w-full overflow-x-hidden">
+
+ <div className="bg-white w-full overflow-x-hidden">
   <div className="flex flex-col items-center w-full">
-    <div className="flex flex-col xl:flex-row gap-4 items-center lg:items-center justify-between px-4 md:px-8 lg:px-[108px] py-2 md:py-3 lg:py-4 w-full max-w-7xl mx-auto">
-      
-      {/* Logo */}
-      <div
-        className="bg-center bg-cover bg-no-repeat w-[100px] h-[100px] sm:w-[120px] sm:h-[120px] lg:w-[134px] lg:h-[134px] flex-shrink-0"
-        style={{ backgroundImage: `url('${imgLogo}')` }}
-        data-name="Logo"
+    <Container className="w-full flex flex-col lg:flex-row gap-4 items-center justify-between" 
+    >      {/* Logo */}
+      <img
+        className="bg-center bg-cover bg-no-repeat w-[100px] h-[100px] sm:w-[120px] sm:h-[120px] lg:w-[134px] lg:h-[134px] "
+        src={imgLogo}
+        alt="Logo"
       />
+      <div className="flex flex-col xl:flex-row items-center justify-between w-full lg:flex-1 gap-4 lg:gap-2">
 
       {/* Categories & Search */}
       <div
@@ -231,7 +166,7 @@ function MainHeader() {
 
       {/* Action Links */}
       <div
-        className="flex flex-col sm:flex-row gap-3 mt-3 lg:mt-0"
+        className="grid grid-cols-2 sm:grid-rows-1 sm:grid-cols-4 gap-3 mb-3 lg:mt-0"
         data-name="Links"
       >
         <Account />
@@ -240,7 +175,8 @@ function MainHeader() {
         <Cart />
       </div>
     </div>
-  </div>
+</Container>  
+    </div>
 </div>
 
   );
@@ -253,20 +189,17 @@ function Navbar() {
   {/* Top border line */}
   <div className="h-[0.5px] bg-[#C39C45] w-full" />
 
-  <div className="flex flex-col items-center px-4 md:px-8 lg:px-[108px] w-full">
-    <div
-      className="flex flex-col lg:flex-row items-center justify-between w-full max-w-7xl mx-auto gap-4 py-3"
-      data-name="Nav Link"
+     <Container className="w-full flex gap-14 items-center justify-between" 
     >
       {/* Navigation Links */}
       <div
         className="flex flex-wrap justify-center lg:justify-start gap-4 md:gap-6 lg:gap-8 text-[16px] md:text-[18px] font-['Radley',_sans-serif] text-black"
         data-name="Links"
-      >
+        >
         {["Home", "About", "Shop", "Contact", "Orders"].map((link) => (
           <p
-            key={link}
-            className="cursor-pointer hover:text-[#c39c45] transition-colors whitespace-nowrap"
+          key={link}
+          className=" text-black text-lg lg:text-xl font-normal font-['Radley'] cursor-pointer hover:text-[#c39c45] transition-colors whitespace-nowrap"
           >
             {link}
           </p>
@@ -292,8 +225,7 @@ function Navbar() {
           </div>
         </div>
       </div>
-    </div>
-  </div>
+          </Container>
 
   {/* Bottom border line */}
   <div className="h-[0.5px] bg-[#C39C45] w-full" />
@@ -304,7 +236,7 @@ function Navbar() {
 
 export default function TopHeader() {
   return (
-    <div className="flex flex-col items-center justify-start relative w-full" data-name="Top header">
+    <div className="flex flex-col items-center justify-start w-full" data-name="Top header">
       <TopNavbar />
       <MainHeader />
       <Navbar />

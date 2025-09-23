@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { products } from '../data';
 import ProductCard from './prductCard';
 import { useCart } from '../context/CarContext';
+import Container from './ui/Container';
 
 function LeftArrow({ onClick }: { onClick: () => void }) {
   return (
@@ -46,7 +47,7 @@ function Arrows({ onPrev, onNext }: { onPrev: () => void; onNext: () => void }) 
 
 function SectionHeader({ onPrev, onNext }: { onPrev: () => void; onNext: () => void }) {
   return (
-    <div className="content-stretch flex  items-center justify-between relative shrink-0 w-full gap-4 sm:gap-0">
+    <div className="flex  items-center justify-between relative shrink-0 w-full gap-4 sm:gap-0">
       <div className="font-['Radley:Regular',_sans-serif] leading-[0] not-italic relative shrink-0 text-[20px] sm:text-[24px] lg:text-[28px] text-black text-center text-nowrap">
         <p className="leading-[normal] whitespace-pre">Featured Grocery</p>
       </div>
@@ -142,12 +143,10 @@ export default function FeaturedCategories() {
   };
 
   return (
-    <div className="w-full bg-white py-8 sm:py-12 lg:py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="content-stretch flex flex-col gap-[24px] sm:gap-[32px] items-center justify-center relative size-full">
+      <Container className="w-full py-8 sm:py-16 gap-8 flex flex-col items-start justify-start">
         <SectionHeader onPrev={handlePrev} onNext={handleNext} />
 
-        <div className="grid grid-rows-1 justify-center md:grid-cols-3 lg:grid-cols-6 gap-4 lg:gap-[24px] w-full">
+        <div className="flex gap-4 lg:gap-[24px] w-full overflow-hidden">
             {visibleProductsList.map((product) => (
           <ProductCard
           key={product.id}
@@ -161,8 +160,6 @@ export default function FeaturedCategories() {
           />
         ))}
         </div>
-      </div>
-      </div>
-    </div>
+    </Container>
   );
 }

@@ -4,7 +4,7 @@ import imgImage254 from "../assets/featured-product-3.png";
 import imgImage287 from "../assets/featured-product-4.png";
 import imgImage77 from "../assets/featured-product-5.png";
 import imgImage258 from "../assets/featured-product-6.png";
-import type { Product } from "../interfaces";
+import type { LinksData, Product } from "../interfaces";
 import imgImg61671 from "../assets/product-img-1.png";
 import imgDeliciousCoffeeCupsWithFoamAssortment1 from "../assets/coffee-cups-foam.png";
 import imgImg61721 from "../assets/product-img-2.png";
@@ -26,6 +26,12 @@ import imgImage4 from "../assets/category-img-5.png";
 import type { Category } from "../interfaces";
 
 
+
+
+export const linksData:LinksData [] = [
+      { name: "White Mode", src: "./icons/weui_arrow-outlined.svg" },
+      { name: "English", src: "./icons/weui_arrow-outlined.svg" }
+]
 
 export const householdSuppliesCategories: Category[] = [
   {
@@ -143,9 +149,26 @@ export const products: Product[] = [
     price: 230,
     image: imgImage77,
     rating: 4
-  },
+  }
+  ,
   {
     id: "6",
+    name: "Revana Tomato Sauce 800gm",
+    price: 190,
+    image: imgImage258,
+    rating: 4
+  }
+  ,
+  {
+    id: "7",
+    name: "Revana Tomato Sauce 800gm",
+    price: 190,
+    image: imgImage258,
+    rating: 4
+  }
+  ,
+  {
+    id: "8",
     name: "Revana Tomato Sauce 800gm",
     price: 190,
     image: imgImage258,

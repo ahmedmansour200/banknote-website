@@ -6,10 +6,10 @@ function ShopAllButton({ onClick }: { onClick?: () => void }) {
   return (
     <button
       onClick={onClick}
-      className="box-border content-stretch flex gap-[10px] items-center justify-center px-[16px] py-[6px] relative rounded-[4px] shrink-0 border border-black hover:bg-gray-50 transition-colors cursor-pointer"
+      className="box-border content-stretch flex gap-[10px] items-center justify-center px-[16px] py-[6px] relative rounded-[4px] shrink-0 border  hover:bg-[var(--main-color)]  transition-colors cursor-pointer group"
       data-name="Shop All Button"
     >
-      <div className="font-['Cairo:Medium',_sans-serif] font-medium leading-[0] not-italic relative shrink-0 text-[14px] text-black text-center text-nowrap">
+      <div className="font-['Cairo:Medium',_sans-serif] font-medium leading-[0] not-italic relative shrink-0 text-[14px] text-black group-hover:text-white text-center text-nowrap">
         <p className="leading-[22px] whitespace-pre">SHOP ALL</p>
       </div>
     </button>
@@ -58,7 +58,7 @@ export default function CategorySection({ title, categories, isProducts = false 
 
   return (
     <div className="content-stretch flex flex-col gap-[32px] items-start justify-start relative shrink-0 w-full" data-name="Category Section">
-      <div className="content-stretch flex gap-4 sm:gap-0  justify-between relative shrink-0 w-full flex-wrap" data-name="Section Header">
+      <div className="content-stretch flex gap-4 sm:gap-0  justify-between items-center relative shrink-0 w-full flex-wrap" data-name="Section Header">
         <div className="font-['Radley:Regular',_sans-serif] leading-[0] not-italic relative shrink-0 text-[20px] sm:text-[24px] lg:text-[28px] text-black text-center text-nowrap">
           <p className="leading-[normal] whitespace-pre">{title}</p>
         </div>

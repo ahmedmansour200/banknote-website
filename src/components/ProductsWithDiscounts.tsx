@@ -7,6 +7,7 @@ import QuantityCounter from './prductCard/QuantityCounter';
 import Stars from './prductCard/Stars';
 import { products } from '../data';
 import { useCart } from '../context/CarContext';
+import Container from './ui/Container';
 
 
 function Timer() {
@@ -188,9 +189,7 @@ export default function ProductsWithDiscounts() {
   };
 
   return (
-    <div className="w-full bg-white py-8 sm:py-12 lg:py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="content-stretch flex flex-col gap-[24px] sm:gap-[32px] items-start justify-start relative size-full">
+        <Container className="flex flex-col gap-[24px] sm:gap-[32px] items-start justify-start relative size-full py-3">
           <SectionHeader />
 
           <div className="bg-white min-h-[400px] relative rounded-[4px] shrink-0 w-full">
@@ -252,8 +251,6 @@ export default function ProductsWithDiscounts() {
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
+        </Container>
   );
 }
